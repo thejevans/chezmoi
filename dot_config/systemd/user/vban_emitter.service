@@ -1,0 +1,10 @@
+[Unit]
+Description=vban - Linux command-line VBAN tools
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/sbin/vban_emitter -i 192.168.1.20 -p 6980 -s "GameAudio" -b pulseaudio
+
+[Install]
+WantedBy=default.target
